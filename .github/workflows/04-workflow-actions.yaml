@@ -10,7 +10,7 @@ jobs:
         working-directory: 04-using-actions/react-app
 
     steps:
-      - name: Check out Code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: setup node
