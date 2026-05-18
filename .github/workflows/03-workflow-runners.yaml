@@ -3,19 +3,28 @@ name: 03- Workflow- Runners
 on: push
 
 jobs:
-  ubuntu-eco:
+  ubuntu-echo:
     runs-on: ubuntu-latest
     steps:
       - name: Show OS
         run: |
           echo "This job is running on Ubuntu Server."
           echo "Runner OS: $RUNNER_OS"
-  
-  windows:
+        
+  windows-echo:
     runs-on: windows-latest
     steps:
       - name: Show OS
+        shell: bash
         run: |
-          echo "This job is running on Windows Server."
+            echo "This job is running on Windows Server."
+            echo "Runner OS: $RUNNER_OS"
+            
+  mac-echo:
+    runs-on: macos-latest
+    steps:
+      - name: Show OS
+        run: |
+          echo "This job is running on MacOS Server."
           echo "Runner OS: $RUNNER_OS"
 
